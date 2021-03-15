@@ -1,12 +1,6 @@
 from kivy.app import App
 from kivy.uix.button import Button
-'''
-pos = (50, 50) #to change position
-size_hint = (.8, .8)
-size = (300, 100), size_hint = (None, None) #to change static size
 
-37:30/59:01
-'''
 class FunkyButton(Button):
 	def __init__(self, **kwargs):
 		super(FunkyButton, self).__init__(**kwargs)
