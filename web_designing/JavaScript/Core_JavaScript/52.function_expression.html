@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/html5.gif">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+
+</style>
+</head>
+<body>    
+
+<h1>function_expression in JavaScript.</h1>
+<p>
+    Function expression in JavaScript are not hoisted, unlike fucntion declarations.<br>
+    You can't call function expression before function definition.
+</p>
+<hr>
+
+<script>
+    //function declaration
+    show() //You can call function declaration before function definition.
+    function show(){
+        document.write("ArtificialWorld...<br>")
+    }
+</script>
+
+<script>
+    //function expression
+    var disp = function show(){
+        document.write("ArtificialWorld...<br>")
+    }
+    disp() //You can't call function expression before function definition.
+</script>
+
+</body>
+</html>

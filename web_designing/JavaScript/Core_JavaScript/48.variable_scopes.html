@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/html5.gif">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+
+</style>
+</head>
+<body>
+
+    
+
+<h1>variable scope in JavaScript.</h1>
+<h2>JavaScript has two scopes</h2>
+<ol class="list">
+    <li>Global</li>
+    <li>Local</li>
+</ol>
+<hr>
+
+<h2>Global variable</h2>
+<p>
+    A variable that is declared outside a function definition.is a global_variable.
+</p>
+<p>You can accessese it from anywhere</p>
+
+<!-- <script>
+var g = "I am global variable"; //Global variable
+    function show()
+    {
+        document.write(g+"<br>"); //inside a function
+    }
+    show()
+document.write(g+"<br>"); //outside a function
+
+if(true){
+    document.write(g); //inside a block
+}
+</script> -->
+
+
+
+<!-- <script>
+    function show()
+    {
+        g = "I am global variable"; //Global variable
+        document.write("I am inside a function "+g+"<br>"); //inside a function
+    }
+    show()
+document.write("I am outside function "+g+"<br>"); //outside a function
+
+if(true){
+    document.write("I am inside a block "+g); //inside a block
+}
+</script> -->
+<hr>
+
+
+
+
+<h2>Local variable</h2>
+<p>
+    A variable that is declared inside a function definition is a local_variable.
+</p>
+<p>
+    If a variable has not been declared with var it is created as a global_variable.
+</p>
+
+<p>You can only access in any specific function</p>
+
+<!-- <script>
+    function show(){
+        var g = "I am local variable"; //Local variable
+        document.write(g+"<br>");
+    }
+    show()
+</script> -->
+
+
+<p>
+    If there is function inside a function the inner function can access outer function's variables but outer function can not access inner function's variables.
+</p>
+
+</body>
+</html>

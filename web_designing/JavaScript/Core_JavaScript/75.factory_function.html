@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/javascript.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+
+</style>
+</head>
+<body> 
+
+<h1>factory function in JavaScript</h1>
+<!-- <script>
+    function mobile(){
+        return {
+            model: 'Samsung-M30',
+            price: function(){
+                return "Price Rs. 3000";}
+            };
+    }
+    var samsung = mobile();
+    document.write(samsung.model + "<br>" + samsung.price())
+</script> -->
+
+
+<script>
+    // factory function with parameter
+    function mobile(model_no){
+        return {
+            model: model_no,
+            price: function(){
+                return "Price Rs. 3000";}
+            };
+    }
+    var samsung = mobile('Samsung-M30');
+    var nokia = mobile('Nokia-3320');
+    document.write(samsung.model + "<br>" + samsung.price() + "<br>")
+    document.write(nokia.model + "<br>" + samsung.price())
+</script>
+
+</body>
+</html>

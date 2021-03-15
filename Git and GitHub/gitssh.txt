@@ -1,0 +1,22 @@
+
+ls ~/.ssh: to check existing SSH keys.
+
+ssh-keygen -t rsa -b 4096 -C "artificialworld09.com": to generate a new SSH key.
+
+
+
+Adding your SSH key to the ssh-agent
+eval "$(ssh-agent -s)": Start the ssh-agent in the background.
+ssh-add ~/.ssh/id_ed25519
+
+
+ssh -T git@github.com: to test SSH connection.
+
+github.com/artificialworld09/Settings/SSH and GPG kays/New SSH key/
+
+Title: Home_PC
+Key: 'Begins with 'ssh-rsa'
+
+Add SSH key
+
+

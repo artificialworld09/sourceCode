@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>linuxAllCommands</title>
+<link rel="icon" href="images/KaliLinux.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<div class="terminal">
+<h1>KaliLinux_2020.2</h1>
+<p>
+    Press: <span class="bt">CTRL</span> + <span class="bt">ALT</span> + <span class="bt">T</span> to open terminal.
+</p>
+
+<div class="background">
+    <img src="Images/titlebar.jpg" alt="titlebar" style="width: 890px; height: 73px; position: fixed;">
+
+    <ul style="padding: 0; margin-left: 5px; list-style-type: none;">
+    <li>
+    <img src="Images/root.png">lsb_release -a<br>
+    <span style="color: yellow;">to check the version of KaliLinux</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">uname -r<br>
+    <span style="color: yellow;">to see the released version of kernel.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">uname -a<br>
+    <span style="color: yellow;">to see the whole informations about kernel. Like- released version, user login, released date etc.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat /etc/issue<br>
+    <span style="color: yellow;">to see linux destibution.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get update<br>
+    <span style="color: yellow;">to update Linux OS.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get upgrade<br>
+    <span style="color: yellow;">to upgrade Linux OS.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get dist-upgrade<br>
+    <span style="color: yellow;">to upgrade core Linux OS.</span>
+    </li>
+    <hr>
+
+    <h2>Or</h2>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get update && apt -y full-upgrade<br>
+    <span style="color: yellow;">to full upgrade your Linux OS.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo chsh -s /bin/zsh<br>
+    <span style="color: yellow;">to change the user shell.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get install -y virtualbox-guest-x11<br>
+    <span style="color: yellow;">to install guest edition in your virtual box.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get install vlc<br>
+    <span style="color: yellow;">to install vlc player</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get remove -y vlc<br>
+    <span style="color: yellow;">to remove vlc player</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">sudo apt-get --purge remove vlc<br>
+    <span style="color: yellow;">to remove configration file of any software after removing that.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">apt list --installed<br>
+    <span style="color: yellow;">to check installed packeges in your PC.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">pwd<br>
+    <span style="color: yellow;">to check persent working directory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mkdir 'new_folder'<br>
+    <span style="color: yellow;">to make a 'new_folder'.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cd 'myFolder'<br>
+    <span style="color: yellow;">to go into 'myFolder'.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cd ~<br>
+    <span style="color: yellow;">to comeback into home directory .</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cd ..<br>
+    <span style="color: yellow;">to come out from any folder.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cd /<br>
+    <span style="color: yellow;">to go into root directory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">rmdir 'New folder'<br>
+    <span style="color: yellow;">to remove any empty folder.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">rm -r 'My file'<br>
+    <span style="color: yellow;">to remove any file and folder.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">rm -f 'My file'<br>
+    <span style="color: yellow;">to remove any file and folder without any  notification..</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">rm -f *<br>
+    <span style="color: yellow;">to remove everything of persent working directory without any notification.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">rm -rf 'New folder'<br>
+    <span style="color: yellow;">to forcely remove any file and folder.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">clear<br>
+    <span style="color: yellow;">to clear the Terminal window.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">touch 'myFile.txt'<br>
+    <span style="color: yellow;">to create an empty file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat 'myFile.txt'<br>
+    <span style="color: yellow;">to read myFile.txt.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat -n myFile.txt<br>
+    <span style="color: yellow;">to read myFile.txt with line number.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat myFile.txt | tr 'a-z' 'A-Z'<br>
+    <span style="color: yellow;">to read myFile.txt into uppercase.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat > 'myFile.txt' <span class="bt">ENTER</span><br>
+    This is my first file created by Terminal command. <span class="bt">ENTER</span><br>
+    <span class="bt">CTRL</span> + <span class="bt">D</span>
+    <span style="color: yellow;">to create a new text file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat 'myFile.txt' > 'newFile.txt'<br>
+    <span style="color: yellow;">to copy myFile.txt data into newFile.txt</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat 'myFile.txt' >> 'newFile.txt'<br>
+    <span style="color: yellow;">to add 'myFile.txt' file data into 'newFile.txt' file without overwriting.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat -n 'My file'<br>
+    <span style="color: yellow;">to get information about processor.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat /proc/cpuinfo<br>
+    <span style="color: yellow;">to get information about processor.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cat /proc/meminfo<br>
+    <span style="color: yellow;">to get information about memory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">whatis rm<br>
+    <span style="color: yellow;">to get a short details about rm.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">man rm<br>
+    <span style="color: yellow;">to get a manual about rm.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">man ls > command_menu.txt<br>
+    <span style="color: yellow;">to print ls command manual into a plain text file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">rm --help<br>
+    <span style="color: yellow;">to know uses and santax of rm.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">which rm<br>
+    <span style="color: yellow;">to know the path of rm exist.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">which python3<br>
+    <span style="color: yellow;">to know the path of python3 exist.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">locate -i leafpad<br>
+    <span style="color: yellow;">to find any file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">find / -name MyFile.txt<br>
+    <span style="color: yellow;">to find MyFile.txt named file in whole system.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">find / -name *.htm<br>
+    <span style="color: yellow;">to find any file by that's extention name.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">find / -size 512k<br>
+    <span style="color: yellow;">to find any file by that's size.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png"><span class="bt">CTRL</span> + <span class="bt">C</span><br>
+    <span style="color: yellow;">to kill any running command.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png"><span class="bt">CTRL</span> + <span class="bt">Z</span><br>
+    <span style="color: yellow;">to stop any running command.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">bg<br>
+    <span style="color: yellow;">to see stopped program</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">fg 1<br>
+    <span style="color: yellow;">to run background stopped program</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">jobs<br>
+    <span style="color: yellow;">to see background program status.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ps a<br>
+    <span style="color: yellow;">to check the list of running tasks.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">kill 729<br>
+    <span style="color: yellow;">to kill any running task. (729 is PID)</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">kill -9 729<br>
+    <span style="color: yellow;">to forcely kill any running task.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ps aux<br>
+    <span style="color: yellow;">to check all running procese.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ps aux | less<br>
+    <span style="color: yellow;">to check all running procese line by line.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">top<br>
+    <span style="color: yellow;">to check tasks of running commands. (press Q to stop 'top command')</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">du<br>
+    <span style="color: yellow;">to check file size.</span>
+    </li>
+    <hr>
+    
+    <li>
+    <img src="Images/root.png">du -h a.html<br>
+    <span style="color: yellow;">to check any specific file size.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">free<br>
+    <span style="color: yellow;">to check free disk-space of your PC.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mv testFile.txt ./newFolder/<br>
+    <span style="color: yellow;">to move file in parent directory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mv testFile.txt ..<br>
+    <span style="color: yellow;">to move out file from current directory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mv testfile.txt /home/user/Desktop/<br>
+    <span style="color: yellow;">to move any file to any specific location.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mv testfile.txt /home/user/Desktop/'New file.txt'<br>
+    <span style="color: yellow;">to move any file with new given name.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mv myFile.txt .myFile.txt<br>
+    <span style="color: yellow;">to hide any file.(we can hide any file by putting . before the file.)</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">mv myFile.txt myFile1.txt<br>
+    <span style="color: yellow;">to rename any file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ls<br>
+    <span style="color: yellow;">to check the file and folder list of persent working directory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ls /home/user<br>
+    <span style="color: yellow;">to check the file and folder list of specific path directory.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ls -a<br>
+    <span style="color: yellow;">to check file and folder list. (including hidden file and folder).</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ls a*<br>
+    <span style="color: yellow;">to check all file and folder started from 'a' charector.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ls -l<br>
+    <span style="color: yellow;">to see long list.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ls -la<br>
+    <span style="color: yellow;">to check all type of files and directories.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cp /root/Desktop/'myFile' /root/Documents/<br>
+    <span style="color: yellow;">to copy any file from one location to another lacation.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cp /root/Desktop/myFile.txt /root/Documents/yourFile.txt<br>
+    <span style="color: yellow;">to copy any file with a new name.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cp -r/root/Desktop/* /root/Documents/<br>
+    <span style="color: yellow;">to copy all file from one location to another lacation.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">history<br>
+    <span style="color: yellow;">to see that commands history which have fired before.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">!1349<br>
+    <span style="color: yellow;">You can use this command after run history command, this command is used to run again the command that is available in history record. (1349 is record list line number.)</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">history -c<br>
+    <span style="color: yellow;">to clear the history.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cal<br>
+    <span style="color: yellow;">to see the calendar of current month.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cal 2017<br>
+    <span style="color: yellow;">to see the calendar of year 2017.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">cal 03 2016<br>
+    <span style="color: yellow;">to see the calendar of March 2016.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">date<br>
+    <span style="color: yellow;">to see the current date by this command.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">date 042517102018<br>
+    <span style="color: yellow;">to set Date and Time of computer. (04-Month; 25-Day; 17-Time; 10-Minute; 2018-Year;</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">w<br>
+    <span style="color: yellow;">to see the user login details.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">last<br>
+    <span style="color: yellow;">to see last user login information.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">uptime<br>
+    <span style="color: yellow;">to check log on time of your PC.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">chage -l root<br>
+    <span style="color: yellow;">to get information about any user.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">chage -W 2 root<br>
+    <span style="color: yellow;">to set user expiry warning for user.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">chage -E 2018-04-27 root<br>
+    <span style="color: yellow;">to set expiry date of root user.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">whoami<br>
+    <span style="color: yellow;">to see from which user are you logged in.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">hostname<br>
+    <span style="color: yellow;">to see host name.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">su -<br>
+    password: ******<br>
+    <span style="color: yellow;">to login as Super/root user.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">passwd -d root<br>
+    <span style="color: yellow;">to remove user password.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">passwd<br>
+    New password: ******<br>
+    Retype new password: ******<br>
+    <span style="color: yellow;">to change root password.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">passwd matrix<br>
+    Enter new UNIX password: ******<br>
+    Retype UNIX password: ******<br>
+    passwd: password updated succesefully<br>
+    <span style="color: yellow;">to change user password.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">useradd newUser<br>
+    <span style="color: yellow;">to add newUser.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">passwd newUser<br>
+    passwd newUser: *****<br>
+    Retype new password: *****<br>
+    passwd: password updated successfully<br><br>
+    <span style="color: yellow;">to set password of newUser</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">passwd -d newUser<br>
+    <span style="color: yellow;">to delete newUser password.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">usermod -L newUser<br>
+    <span style="color: yellow;">to lock newUser.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">passwd newUser<br>
+    passwd newUser: *****<br>
+    Retype new password: *****<br>
+    passwd: password updated successfully<br><br>
+    <span style="color: yellow;">to set password of newUser</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">usermod -U newUser<br>
+    <span style="color: yellow;">to unlock newUser.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">adduser user1<br>
+    New password: ***** <span class="bt">ENTER</span><br>
+    Retype new password: ***** <span class="bt">ENTER</span><br>
+    Full Name[]: Abdul Zoha <span class="bt">ENTER</span><br>
+    Room Number[]: GF-10 <span class="bt">ENTER</span><br>
+    Word Phone[]: 50457791 <span class="bt">ENTER</span><br>
+    Home Phone[]: 9006228083 <span class="bt">ENTER</span><br>
+    Other: []: <span class="bt">ENTER</span><br>
+    Is the information correct? [Y/n] y <span class="bt">ENTER</span><br>
+    <span style="color: yellow;">to add new user.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">head file.txt<br>
+    <span style="color: yellow;">to read upper 10 lines of file.txt.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">head -2 file.txt<br>
+    <span style="color: yellow;">to read upper 2 lines of file.txt.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">tail file.txt<br>
+    <span style="color: yellow;">to read last 10 lines of file.txt.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">tail -2 file.txt<br>
+    <span style="color: yellow;">to read last 2 lines of file.txt</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">wc 'My file'<br>
+    <span style="color: yellow;">to count lines, words and charectors of any text document.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">wc -l 'My file'<br>
+    <span style="color: yellow;">to count lines of any text document.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">wc -c 'My file'<br>
+    <span style="color: yellow;">to count charectors of any text document.(including spaces).</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">wc -w 'My file'<br>
+    <span style="color: yellow;">to count words of any text document.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">diff 'My file' 'My file2'<br>
+    <span style="color: yellow;">to see the diffrences between two documents file data.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">df -h<br>
+    <span style="color: yellow;">to see the partitions details.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">df -h /dev/sda1<br>
+    <span style="color: yellow;">to see any specific partition details.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">look manage<br>
+    <span style="color: yellow;">to find out 'manage' word in your computer.</span>
+    </li>
+    <hr>
+
+
+
+    
+    <li>
+    <img src="Images/root.png">ln -s MyFile SoftLink<br>
+    <span style="color: yellow;">to create a SoftLink of any file.</span>
+    </li>
+
+    <li>
+    <img src="Images/root.png">ln MyFile HardLink<br>
+    <span style="color: yellow;">to create a HardLink of any file.</span>
+    </li>
+    <h1>What is diffrence between Softlink and Hardlink?</h1>
+    <h2>We can access Hardlink whenever original file deleted. But we can never access Softlink whenever original file deleted.</h2>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">tar -cvf MyFolder.tar MyFolder<br>
+    <span style="color: yellow;">to archive any folder in '.tar' extention.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">tar -xvf MyFolder.tar<br>
+    <span style="color: yellow;">to extract '.tar' file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">tar -tvf MyFolder.tar<br>
+    <span style="color: yellow;">to check any '.tar' file's data.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">gzip MyFile<br>
+    <span style="color: yellow;">to convert any file into zip file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">zcat MyFile.gz<br>
+    <span style="color: yellow;">to read '.gz' extention file's data, created by gzip command.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">gunzip MyFile.gz<br>
+    <span style="color: yellow;">to unzip 'gzip' file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">bzip2 MyFile<br>
+    <span style="color: yellow;">to convert any file into bzip file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">bunzip2 MyFile.bz2<br>
+    <span style="color: yellow;">to unzip 'bzip2' file.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ping 127.0.0.1<br>
+    <span style="color: yellow;">to check the connectivity of network.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ping -c 5 127.0.0.1<br>
+    <span style="color: yellow;">to check the connectivity of network but only for five (5) times.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ethtool etho<br>
+    <span style="color: yellow;">to check the Internet cable connection details.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ifconfig<br>
+    <span style="color: yellow;">to check the network interfaces.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ifconfig eth0<br>
+    <span style="color: yellow;">to check the physical network interface.</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ifconfig eth0 192.168.0.115<br>
+    <span style="color: yellow;">to change the IP of eth0. (Temp)</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">df -h<br>
+    <span style="color: yellow;">to see the partitions details.</span>
+    </li>
+    <hr>
+
+    <h1>Applying Fix ip address:-</h1>
+    <li>
+        Goto: Search bar and type: Advanced Network Configuration <span class="bt">ENTER</span>
+    </li>
+
+    <li>
+        Select your internet connection and click on Gear icon.
+    </li>
+
+    <li>
+        Goto: IPv4 Settings/Add <br>
+        Address: 192.168.0.100<br>
+		Netmask: 24<br>
+		Gateway: 192.168.0.255 /Save<br><br>
+    </li>
+
+    <li>
+        Now goto the Terminal window and fire these commands:
+    </li>
+
+    <li>
+    <img src="Images/root.png">ifconfig eth0 down <span class="bt">ENTER</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">service networking restart <span class="bt">ENTER</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ifconfig eth0 up <span class="bt">ENTER</span>
+    </li>
+    <hr>
+
+    <li>
+    <img src="Images/root.png">ifconfig eth0 <span class="bt">ENTER</span>
+    </li>
+    <hr>
+    </ul>
+</div>
+</div>
+    
+    
+</body>
+</html>

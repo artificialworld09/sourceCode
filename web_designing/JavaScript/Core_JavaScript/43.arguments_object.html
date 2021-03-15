@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/html5.gif">
+<link rel="stylesheet" type="text/css" href="#">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+    
+
+<h1>argument object in JavaScript.</h1>
+
+ <!-- <script>
+    function disp(a,b,c)
+    {
+        document.write("first name: "+a+" middle name: "+b+" last name: "+c+"<br>");
+        document.write("first name: "+arguments[0]+" last name: "+arguments[2]+" middle name: "+arguments[1]);
+    }
+    disp("Abdul","Zoha")
+</script> -->
+
+
+
+<!-- <script>
+   function disp(a,b)
+   {
+       arguments[1] = "Zoha" // Change argument
+       document.write("first name: "+a+" Last_name: "+b+"<br>");
+       document.write("first name: "+arguments[0]+" Last_name: "+arguments[1]);
+   }
+   disp("Abdul","Zoha")
+</script> -->
+
+
+
+<!-- <script>
+    function disp(a,b)
+    {
+        var n = arguments.length; //Check length of argument
+        document.write("first name: "+a+" Last_name: "+b+"<br>");
+        document.write(n);
+    }
+    disp("Abdul","Zoha",2)
+ </script> -->
+
+
+
+<!-- <script>
+// Access arguments by for loop
+    function disp()
+    {
+        var n = arguments.length;
+        for(var i = 0; i<n; i++)
+        {
+            document.write(arguments[i] + " ");
+        }
+    }
+    disp("Hello","Artificial","World")
+ </script> -->
+
+
+
+<script>
+    function disp()
+    {
+        document.write(arguments.callee);
+    }
+    disp("Hello","Artificial","World")
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+who
+users
+uname
+uname -r -a
+ls -R
+lsblk
+df
+wget www.w3schools.com
+
+01:05:00/04:00:00

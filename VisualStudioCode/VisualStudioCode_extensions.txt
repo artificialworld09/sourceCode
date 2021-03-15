@@ -1,0 +1,5 @@
+Monokai-Contrast Theme
+Code Runner
+Jupyter
+Live Server
+Python

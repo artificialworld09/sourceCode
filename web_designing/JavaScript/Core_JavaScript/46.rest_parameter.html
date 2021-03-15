@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/html5.gif">
+<link rel="stylesheet" type="text/css" href="#">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+    
+
+<h1>rest parameter in JavaScript.</h1>
+
+ <!-- <script>
+    function add(...args) //The rest operator must be last paramenter to a function and it returns the value in array...
+    {
+        document.write(args,"<br>");
+        document.write(args[2])
+    }
+    add("Apple",10,20,30);
+</script> -->
+
+
+<script>
+    function add(a, ...args)
+    {
+        document.write(args,"<br>");
+        document.write("A: "+ a,"<br>");
+    }
+    add("Apple",10,20,50);
+</script>
+
+</body>
+</html>
