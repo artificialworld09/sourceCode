@@ -1,8 +1,22 @@
 '''
 There are 3 ways to insert widgets in Tkinter
-1. Grid System (Row,Colum)
-2. Pack (Expand,fill,side) #fill=Y/X (X=Left to Right,  Y=Up to Down), side=LEFT/RIGHT/BOTTOM/TOP, pack(pady=5) (to give margin up&down), pack(padx=5) (to give margin left&right)
-3. Place (x,y,relwidth) # X=Left to Right,Y=Up to Down) place(relwidth=1) (0-1)
+1. Grid System (Row,Colum,pady,padx,sticky)
+grid(row=0,column=1, sticky=W)
+sticky=W, E, N, S
+columnspan=2
+
+2. Pack (Expand,fill,side)
+fill=Y/X (X=Left to Right,  Y=Up to Down)
+side=LEFT/RIGHT/BOTTOM/TOP
+pack(pady=5) (to give margin up&down)
+pack(padx=5) (to give margin left&right)
+
+3. Place (x,y,relwidth,relheight)
+x=(Left to Right)
+y=(Up to Down)
+relwidth=(Left to Right)
+relheight=(Top to Down)
+place(relwidth=1) (0-1)
 '''
 
 from tkinter import*
