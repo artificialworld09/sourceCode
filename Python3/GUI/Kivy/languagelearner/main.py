@@ -9,9 +9,8 @@ class FunkyButton(Button):
 		self.size_hint = (None, None)
 		self.size = (500, 500)
 
-class LanguageLearnerApp(App):
+class My_app(App):
     def build(self):
         return FunkyButton()
         
-if __name__ == '__main__':
-    LanguageLearnerApp().run()
+My_app().run()

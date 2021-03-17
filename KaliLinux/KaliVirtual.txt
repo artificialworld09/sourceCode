@@ -1,5 +1,0 @@
-Insert Guest Additions CD image
-df -h
-/media/cdrom0
-chmod 777 VBoxLinuxAdditions.run
-sudo ./VBoxLinuxAdditions.run

@@ -1,30 +1,44 @@
 #!/bin/bash
 
-sudo apt-get install python3-pip -y
-sudo apt-get install tor
-sudo apt-get install figlet
-sudo apt-get install vlc
-sudo apt-get install libreoffice
-# Install Pyaudio
-sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
-sudo apt-get install ffmpeg libav-tools
-sudo pip install pyaudio
-# Install Visual Studio Code
-sudo apt-get install software-properties-common apt-transport-https wget -y
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-apt-get update
-apt-get install code
+###Linux packages
+apt install python3-pip -y
+apt install code -y
+apt install libreoffice
+apt install vlc
+#apt install figlet
+#apt install blender
+
+##to install pillow module for python3
+apt install python3-pil python3-pil-imagetk
 
 
 
-#Install Anonsurf
+
+
+###Python3 packages
+## Install Pyaudio
+apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+apt install ffmpeg libav-tools
+pip install pyaudio
+apt update
+
+##to install playsound module for python3.
+pip3 install playsound
+
+##to install Kivy for python3.
+pip3 install kivy
+pip3 install kivymd
+
+
+
+
+###other packages
+##Install Anonsurf
 git clone https://github.com/Und3rf10w/kali-anonsurf.git
-chmod 777 -R kali-anonsurf
+chmod 775 -R kali-anonsurf
 cd kali-anonsurf
 ./installer.sh
-sudo anonsurf start
 
 #Install tor Browser
-sudo apt install tor torbrowser-launcher
-sudo torbrowser-launcher
+apt install tor torbrowser-launcher
+torbrowser-launcher
