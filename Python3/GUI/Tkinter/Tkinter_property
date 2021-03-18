@@ -17,9 +17,13 @@ lbl = Label(root,text="This is a Label").place(x=20,y=10) #to apply a label in T
 
 lbl = Label(root, text="SoftWaves",font=('Arial',15)) #to change font, size of Label
 
+en1 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red").place(x=20,y=70) #with bg="yellow", fg="red"
 
+en1 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red", show="#").place(x=20,y=100).place(x=20,y=70) #to hide typed text
 
-
+b1.bind("<Button-1>", red) #Left_click
+b1.bind("<Button-2>", yellow) #Wheel_click
+b1.bind("<Button-3>", blue) #Right_click
 
 
 Button(text="Close", command=root.destroy).pack() #to close app

@@ -10,5 +10,6 @@ root.config(bg="#262626")
 en1 = Entry(root, font=("times new roman", 15)).place(x=20,y=10)
 en2 = Entry(root, font=("times new roman", 15, "bold")).place(x=20,y=40) #with bold style
 en3 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red").place(x=20,y=70) #with bg="yellow", fg="red"
+en4 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red", show="*").place(x=20,y=100) #to hide text with '*' symbol
 
 root.mainloop()
