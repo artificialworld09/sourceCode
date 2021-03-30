@@ -19,4 +19,6 @@ Like a dimond in the sky.""")'''
 # print("This is line A", end="=") #to replace newline charector
 # print("This is line B")
 
-print("Hello world","Hello world")
+# print("Hello world","How are you?")
+
+print("Hello world","How are you?",sep="\n")
