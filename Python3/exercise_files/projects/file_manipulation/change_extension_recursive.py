@@ -1,9 +1,12 @@
 import os, shutil
 path = ('.')
 replace = 'txt'
+leave = ('html', 'py')
 for c, folders, files in os.walk(path):
      for file in files:
      	if file == 'change_extension_recursive.py':
+     		continue
+     	if file.endswith(leave):
      		continue
      	old = file
      	data1 = os.path.join(c, old)
