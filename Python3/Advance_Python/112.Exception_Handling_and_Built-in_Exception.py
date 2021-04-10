@@ -209,6 +209,7 @@ print('Rest of the code')
 
 
 
+
 #Exception Handling with logic
 a = 10
 b = 0
