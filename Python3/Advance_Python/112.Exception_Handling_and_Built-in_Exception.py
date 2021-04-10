@@ -7,5 +7,10 @@ Built-in Exception: Exception which are already available in Python Language. Th
 
 User Defined Exception: A programmer can create  his own exceptions, called user-defined exceptions.
 
-1:23/37:16
+Need of Exception_Handling:-
+When an exception occurs, the program terminates suddenly.
+Suddenly termination of program may corrupt the program.
+Exception may cause data loss from the database or a file.
+
+6:10/37:16
 '''
