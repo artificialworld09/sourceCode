@@ -1,5 +1,0 @@
-https://sundowndev.github.io/phoneinfoga/
-
-
-instalation
-sudo curl -sSL https://raw.githubusercontent.com/sundowndev/phoneinfoga/master/support/scripts/install | bash
