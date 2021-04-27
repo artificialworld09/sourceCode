@@ -1,2 +1,0 @@
-create database Collage; to make database.
-create database if not exists Collage; to make database if not exists.

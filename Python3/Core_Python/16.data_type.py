@@ -1,6 +1,31 @@
 # # You can see the type of data using 'type()' function:-
 
 # # Numeric type (int, float, complex)
+# # Assigning the variables
+a = 10
+b = 10.5
+c = 5 + 7j
+
+# # Printing the variables
+print(a)
+print(b)
+print(c)
+print()
+
+# # Printing the type of variables
+print(type(a))
+print(type(b))
+print(type(c))
+
+
+# d = True
+# e = None
+
+
+
+
+
+
 
 # # int
 # a = 10
@@ -40,7 +65,7 @@
 # print(items, type(items))
 
 # mapping / dict
-data = {'Apple':'Seb', 'Mango':'Aam'}
+# data = {'Apple':'Seb', 'Mango':'Aam'}
 # print(data, type(data))
 
-print(data['Apple'])
+# print(data['Apple'])

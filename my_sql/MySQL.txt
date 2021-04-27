@@ -1,0 +1,45 @@
+MySQL in KaliLinux
+
+
+cd /opt/lampp/bin: to goto MySQL directory.
+
+mysql --version: to check version.
+
+
+nano /opt/lampp/phpmyadmin/config.inc.php
+
+
+
+/* Authentication type */
+$
+cfg['Servers'][$i]['auth_type'] = 'config';
+
+$cfg['Servers'][$i]['user'] = 'root';
+
+$cfg['Servers'][$i]['password'] = '';
+
+
+mysql -u root -p -h localhost
+
+
+
+
+
+MySQL in Windows-8
+
+Start MySQL
+127.0.0.1
+
+WIN+X, A, ALT+Y
+
+cd c:\myapps\xampp\mysql\bin
+
+mysql -u root -p -h localhost: to connect with database.
+
+show databases; to see database lists.
+
+create database Student; to create a new database.
+
+create database if not exists Collage; to create a database if not exists.
+
+exit: to exit.
