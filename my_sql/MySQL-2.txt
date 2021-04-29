@@ -1,0 +1,13 @@
+use Collage; to use database.
+
+select database(); to check selected database.
+
+
+CREATE TABLE
+create table students
+(
+name varchar(15),
+class int,
+roll_no int,
+school_name varchar(25)
+);
