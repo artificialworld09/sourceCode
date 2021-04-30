@@ -1,0 +1,39 @@
+show databases; to see database lists.
+
+create database Student; to create a new database.
+
+create database if not exists Collage; to create a database if not exists.
+
+exit: to exit.
+
+use Collage; to use database.
+
+select database(); to check selected database.
+
+
+CREATE TABLE
+create table students
+(
+name varchar(15),
+class int,
+roll_no int,
+school_name varchar(25)
+);
+
+
+show tables; to see tables of selected database;
+
+desc students; to check table datatype.
+
+show columns from students; to see table datatype.
+
+
+INSERT DATA INTO TABLE
+insert into students(name, class, roll_no, school_name)
+values('Abdul Zoha', 3, 25, 'MD Jaan Public School');
+
+insert into students values('Abdul Zoha', 3, 25, 'MD Jaan Public School'); To directaly insert values into table.
+
+select * from students; to see table data.
+
+show warnings; to see warnings of selected database.

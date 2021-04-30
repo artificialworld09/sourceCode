@@ -1,0 +1,18 @@
+sudo mysqld_safe -u root
+CTRL+Z
+sudo mysql
+ps aux | grep mysqld
+sudo kill 1645
+
+
+
+
+
+nano /opt/lampp/phpmyadmin/config.inc.php: to see and edit user name and password.
+/* Authentication type */
+$
+cfg['Servers'][$i]['auth_type'] = 'config';
+
+$cfg['Servers'][$i]['user'] = 'root';
+
+$cfg['Servers'][$i]['password'] = '';

@@ -1,0 +1,25 @@
+MySQL in Windows-8
+
+Start MySQL in Xampp
+127.0.0.1
+
+WIN+X, A, ALT+Y
+
+cd c:\myapps\xampp\mysql\bin
+
+mysql -u root -p -h localhost: to connect with database.
+
+mysql --version: to check version.
+
+
+
+
+
+notepad c:\myapps\xampp\phpmyadmin\config.inc.php: to see and edit user name and password.
+/* Authentication type */
+$
+cfg['Servers'][$i]['auth_type'] = 'config';
+
+$cfg['Servers'][$i]['user'] = 'root';
+
+$cfg['Servers'][$i]['password'] = '';
