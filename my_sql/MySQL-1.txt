@@ -37,3 +37,12 @@ insert into students values('Abdul Zoha', 3, 25, 'MD Jaan Public School'); To di
 select * from students; to see table data.
 
 show warnings; to see warnings of selected database.
+
+
+NULL AND NOT NULL
+create table students2(
+Roll int not null,
+Name varchar(20),
+Class varchar(7) not null
+);
+
