@@ -46,3 +46,11 @@ Name varchar(20),
 Class varchar(7) not null
 );
 
+
+
+DEFAULT VALUE IN TABLE
+create table students(
+Name varchar(30) not null default 'unnamed',
+Age int not null default 18);
+
+insert into students(name) value('Abdul Zoha');
