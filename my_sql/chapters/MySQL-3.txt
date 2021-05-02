@@ -1,0 +1,13 @@
+PRIMARY KEY
+The primary key constraint uniquely identifies each record in a table.
+Primary keys must contain Unique values, and can't contain NULL values.
+
+create table students(
+Roll int not null,
+Name varchar(30) not null default 'unNamed',
+Age int not null default 18,
+primary key(Roll)
+);
+
+select name from students where age = 25;
+select * from students where roll = 25;

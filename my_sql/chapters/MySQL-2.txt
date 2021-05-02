@@ -1,0 +1,6 @@
+ALTER TABLE
+alter table students drop column school;
+
+alter table students add s_no varchar(30);
+
+drop table students; to delete table;

@@ -4,16 +4,13 @@ create database Student; to create a new database.
 
 create database if not exists Collage; to create a database if not exists.
 
-exit: to exit.
-
 use Collage; to use database.
 
 select database(); to check selected database.
 
 
 CREATE TABLE
-create table students
-(
+create table students(
 name varchar(15),
 class int,
 roll_no int,
@@ -50,7 +47,10 @@ Class varchar(7) not null
 
 DEFAULT VALUE IN TABLE
 create table students(
-Name varchar(30) not null default 'unnamed',
-Age int not null default 18);
+Name varchar(30) not null default 'unNamed',
+Age int not null default 18
+);
 
 insert into students(name) value('Abdul Zoha');
+
+exit: to exit.
