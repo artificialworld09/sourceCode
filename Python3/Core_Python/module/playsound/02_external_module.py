@@ -1,3 +1,5 @@
 #pip install playsound
 from playsound import playsound
-playsound("airtel.mp3")
+for i in range(10):
+    print('Hello world!')
+    playsound("play.wav")
