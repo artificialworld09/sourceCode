@@ -20,6 +20,8 @@ pkg remove sl
 pkg install httrack
 pkg install zsh
 pkg install neofetch
+pkg install fish
+pkg install mariadb
 playstore/termux-api
 pkg update && pkg upgrade
 apt update && apt upgrade
