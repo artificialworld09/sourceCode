@@ -1,0 +1,4 @@
+FOREIGN KEY
+A FOREIGN KEY is a key used to link two tables together.
+A FOREIGN KEY is a field (or collection of fields) in one tables that refers to the PRIMARY KEY in another table.
+

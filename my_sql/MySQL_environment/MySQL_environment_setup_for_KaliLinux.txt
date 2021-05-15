@@ -1,8 +1,11 @@
 sudo mysqld_safe -u root
 CTRL+Z
 sudo mysql
+
+sudo ps aux
+sudo ps -u mysql
 ps aux | grep mysqld
-sudo kill -9 1474
+sudo kill 1474
 
 
 

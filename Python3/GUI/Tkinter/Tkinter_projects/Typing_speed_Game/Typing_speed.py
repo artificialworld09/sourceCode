@@ -27,6 +27,24 @@ word = Label(
 )
 word.place(x=350, y=200)
 
+scoreLabel = Label(
+    root,
+    text='Your score: ',
+    font=('arial', 25, 'italic bold'),
+    bg='powder blue',
+    fg='blue'
+)
+scoreLabel.place(x=10, y=100)
+
+scoreLabelCount = Label(
+    root,
+    text='Your score: ',
+    font=('arial', 25, 'italic bold'),
+    bg='powder blue',
+    fg='blue'
+)
+scoreLabelCount.place(x=10, y=100)
+
 ##########################################################Entry_Methods################################################
 wEntry = Entry(
     root,
