@@ -20,9 +20,9 @@ def green(r):
 def maroon(y):
     root.config(bg="maroon")
 
-root.bind("<Shift-Up>", red)
-root.bind("<Control-Up>", yellow)
-root.bind("<Alt-Up>", blue)
+root.bind("<Shift-Up>", red) #Shift+NevUP
+root.bind("<Control-Up>", yellow) #CTRL+NevUP
+root.bind("<Alt-Up>", blue) #Alt+NevUP
 
 
 root.mainloop()

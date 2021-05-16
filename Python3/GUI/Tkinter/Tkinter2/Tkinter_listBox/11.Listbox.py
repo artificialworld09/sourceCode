@@ -13,6 +13,14 @@ width = root.winfo_screenwidth()
 height = root.winfo_screenheight()
 root.maxsize(width, height)
 
+## main topic
+'''
+There are three modes in Listbox:
+1. selectmode=BROWSE (default)
+2. selectmode=MULTIPLE
+3. selectmode=EXTENDED
+'''
+
 
 ##Assigning a Listbox
 ##basic
@@ -75,6 +83,23 @@ sbr.config(command=lbx.yview)
 
 ##configure Listbox with Scrollbar
 lbx.config(yscrollcommand=sbr.set)
+
+
+
+## Delete data
+# language = Listbox(root,font=("time new roman",12),bg="#262626",justify=CENTER,selectmode=BROWSE)
+# language.place(x=100,y=50,width=150)
+
+# for i in range(0,20):
+#     language.insert(i,"Language: "+str(i))
+
+# def show():
+#     get_cursor = language.curselection() #to get all cursor selected data in tuple.
+#     language.delete(get_cursor)
+#     for i in get_cursor:
+#         print(language.get(i))
+
+# btn = Button(root,text="SHOW",font=("times new roman",20,),bg="green",command=show).place(x=100,y=280)
 
 
 root.mainloop()
