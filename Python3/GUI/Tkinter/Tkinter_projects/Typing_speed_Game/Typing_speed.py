@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+from tkinter import messagebox
 
 words = ['Mango', 'Apple', 'Banana', 'Grapes']
 
@@ -15,13 +16,35 @@ def slider():
     font.config(text=sliderwords)
     font.after(100, slider)
 
+def time():
+    global timeleft, score, miss
+    if(timeleft >= 11):
+        pass
+    else:
+        timeLabelCount.config(fg='red')
+    if(timeleft>0):
+        timeleft -= 1
+        timeLabelCount.config(text=timeleft)
+        timeLabelCount.after(1000, time)
+    else:
+        hint.config(text='Hit = {} | Miss = {} | Total Score = {}'.format(score, miss, score-miss))
+        rr = messagebox.askretrycancel('Notification', 'For play again Hit Retry')
+        if(rr==True):
+            score = 0
+            timeleft = 60
+            miss = 0
+            timeLabelCount.config(text=timeleft)
+            word.config(text=world[0])
+            scoreLabelCount.config(text=score)
+
 def startGame(event):
     global score, miss
+    if(timeleft == 60):
+        time()
     hint.config(text='')
     if(wEntry.get() == word['text']):
         score += 1
         scoreLabelCount.config(text=score)
-        print('Matched: ', score)
     else:
         miss += 1
         scoreLabelCount.config(text=score)

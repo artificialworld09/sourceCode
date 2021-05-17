@@ -22,7 +22,7 @@ def updatedata(taskid, newtask):
 conn.execute('''CREATE TABLE IF NOT EXISTS todo(
     id INTEGER PRIMARY KEY,
     task TEXT NOT NULL
-)
+);
 ''') #to create a table
 
 ##to add values
