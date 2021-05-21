@@ -52,8 +52,8 @@ root.title("Home")
 root.config(bg="olivedrab1")
 
 ##set size of windows
-root.geometry("600x300+1820+0")
-root.minsize(600,300) #to set minimum size of window
+root.geometry("500x600+1820+0")
+root.minsize(500,600) #to set minimum size of window
 ##to set maximum size of window
 width = root.winfo_screenwidth()
 height = root.winfo_screenheight()

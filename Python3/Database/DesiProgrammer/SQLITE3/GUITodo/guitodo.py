@@ -1,13 +1,31 @@
 from tkinter import *
 import dbhelper3
+from tkinter import messagebox
 
-def add():
-    pass
+def add(event):
+    if(len(en.get()) == 0):
+        messagebox.showerror('ERROR', 'No data available\nPlease enter some task')
+    else:
+        dbhelper3.insertdata(en.get())
+        en.delete(0, END)
+        populate()
+
+def add2():
+    if(len(en.get()) == 0):
+        messagebox.showerror('ERROR', 'No data available\nPlease enter some task')
+    else:
+        dbhelper3.insertdata(en.get())
+        en.delete(0, END)
+        populate()
 
 def populate():
     lbx.delete(0, END)
     for rows in dbhelper3.show():
         lbx.insert(END, rows[1])
+
+def delete(event):
+    dbhelper3.deletebytask(lbx.get(ANCHOR)) #ANCHOR means selected
+    populate()
 
 root = Tk()
 root.title('TODO')
@@ -33,12 +51,13 @@ en = Entry(
     frame,
     font=('verdana'),
     bg = '#eeeeee',
-).pack(ipadx=20, ipady=5, pady=5)
+)
+en.pack(ipadx=20, ipady=5, pady=5)
 
 btn = Button(
     frame,
     text = 'ADD TASK',
-    # command = add,
+    command = add2,
     bg = '#000000',
     fg = '#eeeeee',
     relief = 'flat',
@@ -47,7 +66,10 @@ btn = Button(
     activebackground = '#1d1d1d',
     bd = 0,
     activeforeground = '#eeeeee'
-).pack(padx=20, ipadx=20, ipady=5)
+)
+btn.pack(padx=20, ipadx=20, ipady=5)
+
+en.bind("<Return>", add)
 
 Label(
     root,
@@ -71,11 +93,15 @@ lbx = Listbox(
     taskframe,
     font=('Verdana 18 bold'),
     bg='#1d1d1d',
-    fg='#eeeeee'
+    fg='#eeeeee',
+    selectbackground='#eeeeee', #to change selected item background
+    selectforeground='#1d1d1d' #to change selected item foreground
 )
 lbx.pack(fill=BOTH, expand=300)
 lbx.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=lbx.yview)
+lbx.bind("<Double-Button-1>", delete)
+lbx.bind("<Delete>", delete)
 
 populate()
 

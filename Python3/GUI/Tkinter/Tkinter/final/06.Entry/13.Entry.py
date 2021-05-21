@@ -1,3 +1,17 @@
+'''
+font=('times new roman', 15),
+font=('times new roman', 15, 'bold'),
+font=('times new roman', 15, 'italic bold'),
+bd=2,
+bg='yellow',
+fg='red',
+padx=20, pady=20,
+ipadx=20, ipady=5,
+relief=SUNKEN, (SUNKEN, GROOVE)
+width=150, height=200,
+show="*"
+'''
+
 from tkinter import*
 root = Tk()
 root.title("Home")
@@ -15,6 +29,5 @@ root.config(bg="#262626")
 
 # en3 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red").place(x=20,y=70) #with bg="yellow", fg="red"
 
-en4 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red", show="*").place(x=20,y=100) #to hide text with '*' symbol
-
+# en4 = Entry(root, font=("times new roman", 15, "bold"), bg="yellow", fg="red", show="*").place(x=20,y=100) #to hide text with '*' symbol
 root.mainloop()

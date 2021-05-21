@@ -22,6 +22,11 @@ def deletebyid(taskid):
     conn.execute(query, (taskid,))
     conn.commit()
 
+def deletebytask(taskval):
+    query = "DELETE FROM todo WHERE task = ?;"
+    conn.execute(query, (taskval,))
+    conn.commit()
+
 def updatedata(taskid, newtask):
     query = "UPDATE todo SET task = ? WHERE id = ?;"
     conn.execute(query, (newtask, taskid))

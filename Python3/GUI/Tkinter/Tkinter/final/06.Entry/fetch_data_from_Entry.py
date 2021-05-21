@@ -13,10 +13,10 @@ def get_name():
 def write():
     data = e1.get()
     result.config(text=(data), fg='white')
-    print(data)
     en1.set("") #to clear e1 after action perform
 
 en1 = IntVar() #to clear event
+
 e1 = Entry(root, textvariable=en1)
 e1.place(x=20,y=10,width=150,height=25)
 
