@@ -1,27 +1,37 @@
 '''
+.place(x=20, y=20, width=150 height=200)
+.place(relwidth=1)
+.place(relheight=.5)
+
 text='This is a Label'
-font=('times new roman', 15),
-font=('times new roman', 15, 'bold'),
-font=('times new roman', 15, 'italic bold'),
-bd=2,
-bg='yellow',
-fg='red',
-padx=20, pady=20,
-ipadx=20, ipady=5,
-relief=SUNKEN, (SUNKEN, GROOVE)
-width=150, height=200,
+text='newline\nwithout\nwidth&height'
+
+#font="fimily", size, "style")
+font=('times new roman', 15)
+font=('times new roman', 15, 'bold')
+font=('times new roman', 15, 'italic bold')
+
+bg='yellow': Background-color
+fg='red': Foreground-color
+padx=20: (to give margin left&right)
+pady=20: (to give margin up&down)
+
+relief=SUNKEN (SUNKEN, GROOVE, RAISED)
+bd=2: (to give border)
+
+width="15" (approximate 15 charecter)
+height="2" (2 lines)
 '''
 
 from tkinter import*
 root = Tk()
+
 root.title("Home")
-pt = PhotoImage(file = 'images/css.png')
-root.iconphoto(False, pt)
 root.geometry("700x400+1820+0")
 root.resizable(0,0)
 root.config(bg="gray")
 
-lbl = Label(root,text="This is a Label")
-lbl.place(x=20,y=10)
+lbl = Label(root, text='This is a Label')
+lbl.place(relheight=1)
 
 root.mainloop()

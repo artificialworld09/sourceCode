@@ -1,5 +1,6 @@
 # from tkinter import*
 # root = Tk()
+
 # root.title("Home")
 # pt = PhotoImage(file = 'images/css.png')
 # root.iconphoto(False, pt)
@@ -14,6 +15,7 @@
 
 # from tkinter import*
 # root = Tk()
+
 # root.title("Home")
 # pt = PhotoImage(file = 'images/css.png')
 # root.iconphoto(False, pt)
@@ -27,6 +29,7 @@
 
 # from tkinter import*
 # root = Tk()
+
 # root.title("Home")
 # pt = PhotoImage(file = 'images/css.png')
 # root.iconphoto(False, pt)
@@ -36,7 +39,7 @@
 # ## to disable resize window
 # # root.resizable(width=False,height=False)
 # # root.resizable(False,False)
-# root.resizable(0,0)
+# # root.resizable(0,0)
 
 # root.mainloop()
 
@@ -47,8 +50,6 @@
 from tkinter import*
 root = Tk()
 root.title("Home")
-# pt = PhotoImage(file = 'icon.ico')
-# root.iconphoto(False, pt)
 root.config(bg="olivedrab1")
 
 ##set size of windows
