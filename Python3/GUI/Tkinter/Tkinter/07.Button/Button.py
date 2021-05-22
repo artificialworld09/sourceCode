@@ -1,5 +1,5 @@
 '''
-.place(x=20, y=20, width=150, height=200)
+.place(x=20, y=20, width=70, height=25)
 .place(relwidth=1)
 .place(relheight=.5)
 
@@ -19,19 +19,20 @@ pady=20: (to give margin up&down)
 relief=SUNKEN (SUNKEN, GROOVE, RAISED)
 bd=2: (to give border)
 
-width="15" (approximate 15 charecter)
-height="2" (2 lines)
+activebackground="black": on hover
+activeforeground="white": on hover
+cursor="hand2": (hand1, hand2)
 '''
 
 from tkinter import*
 root = Tk()
 
 root.title("Home")
-root.geometry("700x400+1820+0")
+root.geometry("1000x400+1820+0")
 root.resizable(0,0)
-root.config(bg="gray")
+root.config(bg="#262626")
 
-lbl = Label(root, text='This is a Label')
-lbl.place(relheight=1)
+btn = Button(root, text='Show', activebackground="black", activeforeground="white", cursor="hand2")
+btn.place(x=20, y=20)
 
 root.mainloop()
