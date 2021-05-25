@@ -9,5 +9,5 @@ def speak(audio):
     engine.runAndWait()
     return
     
-# # if __name__ == "__main__":
-# speak("Hello how are you")
+if __name__ == "__main__":
+speak("Hello how are you")

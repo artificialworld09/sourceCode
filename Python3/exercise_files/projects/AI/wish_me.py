@@ -12,3 +12,6 @@ def wishMe():
     else:
         speak("Good night sir!")
     speak("I'm Alexa, please tell me how may I help you?")
+
+if(__name__=='__main__'):
+    wishMe()
