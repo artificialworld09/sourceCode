@@ -1,20 +1,5 @@
-'''
-https://pythonspot.com/pyqt5/
-
-sudo apt install python3-pyqt5 (for Linux)
-
-to fixed window size
-self.setFixedHeight(600) #to fixed height
-self.setFixedWidth(400) #to fixed width
-self.setFixedSize(self.width, self.height) #to set both
-'''
-
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, #QWidget
-'''
-QWidget: You can't add status bar, main-window etc.
-QMainWindow: You can add status bar, main-window etc.
-'''
+from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QIcon
 
 class App(QWidget):
@@ -26,10 +11,15 @@ class App(QWidget):
         self.height=600
         self.setFixedSize(self.width, self.height) #to set both
         self.title='Main Window'
-        self.setStyleSheet('background-color: grey')
-
-        self.initUI()
+        ##to add an external file for designing
+        self.setObjectName('main_window')
+        stylesheet=''
+        with open('design.qss','r') as f:
+            stylesheet=f.read()
+        self.setStyleSheet(stylesheet)
         
+        self.initUI()
+
     def initUI(self):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
