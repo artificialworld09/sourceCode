@@ -12,7 +12,7 @@ class Window(QWidget):
 
         self.setGeometry(200, 200, 400, 300)
         self.setWindowTitle('Geekscoders.com')
-        self.setWindowIcon(QIcon('css.png'))
+        self.setWindowIcon(QIcon('images/python.png'))
 
         self.show()
 
