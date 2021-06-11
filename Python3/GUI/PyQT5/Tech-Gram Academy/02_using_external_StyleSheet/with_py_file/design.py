@@ -1,5 +1,0 @@
-ss='''
-#main_window{
-    background-color: black;
-}
-'''
