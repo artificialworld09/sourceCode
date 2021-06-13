@@ -1,7 +1,7 @@
-#main_window{
+s='''
+#main{
     background-color: black;
 }
-
 #bubble{
     background-color: #202020;
     min-width: 300px;
@@ -10,11 +10,4 @@
     max-height: 125px;
     border-radius: 20;
 }
-
-#heading{
-    font-weight: bold;
-}
-
-#para{
-    font-size: 13px;
-}
+'''

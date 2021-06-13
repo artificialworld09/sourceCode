@@ -10,7 +10,7 @@ class App(QMainWindow):
 
         self.setGeometry(1520, 10, 400, 600)
         self.setWindowTitle('QLineEdit & QPushButton')
-        self.setWindowIcon(QIcon('python.png'))
+        self.setWindowIcon(QIcon('../images/python.png'))
         self.setStyleSheet(design.ss)
         self.setObjectName('root')
 ##QLineEdit
@@ -34,8 +34,8 @@ class App(QMainWindow):
     def clicked(self):
         data=self.en.text()
         self.lbl.setText(data)
-        self.lbl.adjustSize()
-        self.en.setText('')
+        self.lbl.adjustSize() #to adjust QLabel data
+        self.en.setText('') #to remove QLineEdit data
 
 app=QApplication(sys.argv)
 root=App()
