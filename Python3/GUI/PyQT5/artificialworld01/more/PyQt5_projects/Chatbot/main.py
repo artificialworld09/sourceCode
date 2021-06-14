@@ -46,6 +46,16 @@ class App(QMainWindow):
         self.en.setText('')
         if data2 in "who are you?":
                 speak("I'm Alexa, please tell me how may I help you?")
+        if data2 in "what is your name?":
+                speak("My name is Alexa, please tell me how may I help you?")
+        if data2 in "hi":
+                speak("hello sir!")
+        if data2 in "hello":
+                speak("hi sir!")
+        if data2 in "how old are you?":
+                speak("I'm 18 years old now sir!")
+        if data2 in "how are you?":
+                speak("I'm fine sir")
 
 app=QApplication(sys.argv)
 root=App()
