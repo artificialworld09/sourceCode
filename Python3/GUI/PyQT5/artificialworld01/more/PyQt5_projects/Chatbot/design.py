@@ -9,7 +9,7 @@ ss='''
 }
 
 #en{
-    min-width: 490px;
+    min-width: 580px;
     min-height: 20px;
 }
 
