@@ -45,7 +45,7 @@ class App(QMainWindow):
         self.lbl.adjustSize()
         self.en.setText('')
         if data2 in "who are you?":
-                speak("I'm Alexa, please tell me how may I help you?")
+                speak("I'm a computer program, my name is Alexa")
         if data2 in "what is your name?":
                 speak("My name is Alexa, please tell me how may I help you?")
         if data2 in "hi":
