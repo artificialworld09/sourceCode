@@ -1,5 +1,8 @@
 '''
-LIST OF KEYS:
+doc.qt.io/qt-5/qt.html#Key-enum
+enum Qt::Key
+The key names used by Qt.
+
 Qt::Key_Escape
 Qt::Key_Tab
 Qt::Key_Backtab
@@ -22,6 +25,19 @@ Qt::Key_Left
 Qt::Key_Up
 Qt::Key_Right
 Qt::Key_Down
+
+Qt::Key_PageUp
+Qt::Key_PageDown
+Qt::Key_Shift
+Qt::Key_Control
+Qt::Key_Alt
+Qt::Key_AltGr
+Qt::Key_CapsLock
+Qt::Key_NumLock
+Qt::Key_ScrollLock
+
+Qt::Key_Meta
+Qt::Key_F1 - Qt::Key_F29
 '''
 import sys
 from PyQt5.QtWidgets import (QApplication, QMainWindow)
