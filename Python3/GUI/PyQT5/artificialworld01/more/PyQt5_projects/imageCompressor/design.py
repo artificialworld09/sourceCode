@@ -18,15 +18,15 @@ class App(QMainWindow):
         self.setStyleSheet(style.s)
 
         ##Main window (add a Frames)
-        self.bubble=QtWidgets.QPushButton(self)
+        self.bubble=QtWidgets.QFrame(self)
         self.bubble.setObjectName('bubble')
         self.bubble.move(50, 100)
-        self.bubble.clicked.connect(self.bubble_clicked)
+        self.bubble.mousePressEvent=self.bubble_clicked
 
         self.dir_bubble=QtWidgets.QPushButton(self)
         self.dir_bubble.setObjectName('bubble')
         self.dir_bubble.move(50, 275)
-        self.dir_bubble.clicked.connect(self.dir_clicked)
+        self.dir_bubble.mousePressEvent=self.dir_clicked
 
         ##add QLabel
         self.bubble_heading=QtWidgets.QLabel(self.bubble)
@@ -56,7 +56,12 @@ class App(QMainWindow):
         self.bubble_expanded.setObjectName('bubble_expanded')
         self.bubble_expanded.move(50, 100)
         self.bubble_expanded.setVisible(False)
-        self.bubble_expanded.mousePressEvent=self.back_arrow_clicked
+
+        ##add QLabel
+        self.bubble_heading=QtWidgets.QLabel(self.bubble_expanded)
+        self.bubble_heading.setText('Compress Image')
+        self.bubble_heading.setObjectName('bubble_heading')
+        self.bubble_heading.move(95, 8)
 
         ##dir_bubble_expanded
         self.dir_bubble_expanded=QtWidgets.QFrame(self)
@@ -72,7 +77,6 @@ class App(QMainWindow):
         self.back_arrow.setText('&#8592;')
         self.back_arrow.mousePressEvent=self.back_arrow_clicked
 
-
         self.dir_back_arrow=QtWidgets.QLabel(self.dir_bubble_expanded)
         self.dir_back_arrow.move(15, 0)
         self.dir_back_arrow.setObjectName('back_arrow')
@@ -80,24 +84,34 @@ class App(QMainWindow):
         self.dir_back_arrow.setText('&#8592;')
         self.dir_back_arrow.mousePressEvent=self.back_arrow_clicked
 
-        ##text (QLabel)
-        self.bubble_expanded_para=QtWidgets.QLabel(self.bubble_expanded)
-        self.bubble_expanded_para.move(10, 30)
-        self.bubble_expanded_para.setText('This is bubble_expanded para')
 
-        self.dir_bubble_expanded_para=QtWidgets.QLabel(self.dir_bubble_expanded)
-        self.dir_bubble_expanded_para.move(10, 30)
-        self.dir_bubble_expanded_para.setText('This is dir_bubble_expanded para')
+        self.select_image_label=QtWidgets.QLabel(self.bubble_expanded)
+        self.select_image_label.setText('Choose Image')
+        self.select_image_label.setObjectName('bubble_para')
+        self.select_image_label.move(30, 50)
+        
+        self.image_path=QtWidgets.QLineEdit(self.bubble_expanded)
+        self.image_path.setObjectName('path_text')
+        self.image_path.move(60, 85)
+
+        self.select_image_quality=QtWidgets.QLabel(self.bubble_expanded)
+        self.select_image_quality.setText('Choose Quality')
+        self.select_image_quality.setObjectName('bubble_para')
+        self.select_image_quality.move(30, 130)
+        
+        self.quality_path=QtWidgets.QLineEdit(self.bubble_expanded)
+        self.quality_path.setObjectName('path_text')
+        self.quality_path.move(60, 160)
 
         ##End Main window
 
 ##-------------------------------------------------Functions
-    def bubble_clicked(self):
+    def bubble_clicked(self, event):
         self.bubble.setVisible(False)
         self.dir_bubble.setVisible(False)
         self.bubble_expanded.setVisible(True)
 
-    def dir_clicked(self):
+    def dir_clicked(self, event):
         self.bubble.setVisible(False)
         self.dir_bubble.setVisible(False)
         self.dir_bubble_expanded.setVisible(True)
