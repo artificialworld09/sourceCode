@@ -43,4 +43,35 @@ s='''
     color: #202020;
     border-radius: 5px;
 }
+
+#path_text{
+    max-width: 170px;
+    min-width: 170px;
+    color: #202020;
+}
+
+#quality_path{
+    max-width: 100px;
+    min-width: 100px;
+    color: #202020;
+}
+
+#browse_button{
+    max-width: 20px;
+    min-width: 20px;
+    color: #202020;
+}
+
+#compress_button{
+    color: white;
+    background-color: #202020;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#compress_button:hover{
+    color: #202020;
+    background-color: white;
+}
 '''

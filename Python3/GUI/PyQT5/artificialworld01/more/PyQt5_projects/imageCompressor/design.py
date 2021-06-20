@@ -39,7 +39,6 @@ class App(QMainWindow):
         self.dir_bubble_heading.setObjectName('bubble_heading')
         self.dir_bubble_heading.move(60, 8)
 
-
         self.bubble_para=QtWidgets.QLabel(self.bubble)
         self.bubble_para.setText('Compress Image')
         self.bubble_para.setObjectName('bubble_para')
@@ -84,7 +83,6 @@ class App(QMainWindow):
         self.dir_back_arrow.setText('&#8592;')
         self.dir_back_arrow.mousePressEvent=self.back_arrow_clicked
 
-
         self.select_image_label=QtWidgets.QLabel(self.bubble_expanded)
         self.select_image_label.setText('Choose Image')
         self.select_image_label.setObjectName('bubble_para')
@@ -100,8 +98,18 @@ class App(QMainWindow):
         self.select_image_quality.move(30, 130)
         
         self.quality_path=QtWidgets.QLineEdit(self.bubble_expanded)
-        self.quality_path.setObjectName('path_text')
+        self.quality_path.setObjectName('quality_path')
         self.quality_path.move(60, 160)
+
+        self.browse_button=QtWidgets.QPushButton(self.bubble_expanded)
+        self.browse_button.setText('...')
+        self.browse_button.move(240, 85)
+        self.browse_button.setObjectName('browse_button')
+
+        self.compress_image=QtWidgets.QPushButton(self.bubble_expanded)
+        self.compress_image.setText('Compress')
+        self.compress_image.move(108, 260)
+        self.compress_image.setObjectName('compress_button')
 
         ##End Main window
 
