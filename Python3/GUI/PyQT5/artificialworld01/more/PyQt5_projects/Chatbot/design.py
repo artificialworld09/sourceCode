@@ -74,7 +74,7 @@ class App(QMainWindow):
 
                 elif data2 in "goodbye alexa":
                         speak('Shutting down, thank you sir!')
-                        app.destroy()
+                        app.quit()
 
 app=QApplication(sys.argv)
 root=App()

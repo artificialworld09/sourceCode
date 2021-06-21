@@ -111,6 +111,73 @@ class App(QMainWindow):
         self.compress_image.move(108, 260)
         self.compress_image.setObjectName('compress_button')
 
+        self.quality_combo=QtWidgets.QComboBox(self.bubble_expanded)
+        self.quality_combo.move(170, 160)
+        self.quality_combo.resize(96, 26)
+        self.quality_combo.setObjectName('quality_combo')
+        self.quality_combo.addItem('High')
+        self.quality_combo.addItem('Medium')
+        self.quality_combo.addItem('Low')
+
+        ##add QLabel
+        self.dir_heading=QtWidgets.QLabel(self.dir_bubble_expanded)
+        self.dir_heading.setText('Compress Multiple Images')
+        self.dir_heading.setObjectName('bubble_heading')
+        self.dir_heading.move(60, 8)
+
+        self.select_source_label=QtWidgets.QLabel(self.dir_bubble_expanded)
+        self.select_source_label.setText('Choose source directory')
+        self.select_source_label.setObjectName('bubble_para')
+        self.select_source_label.move(30, 50)
+
+        self.browse_source_button=QtWidgets.QPushButton(self.dir_bubble_expanded)
+        self.browse_source_button.setText('...')
+        self.browse_source_button.move(240, 85)
+        self.browse_source_button.setObjectName('browse_button')
+        
+        self.image_path=QtWidgets.QLineEdit(self.dir_bubble_expanded)
+        self.image_path.setObjectName('path_text')
+        self.image_path.move(60, 85)
+
+        self.select_dest_label=QtWidgets.QLabel(self.dir_bubble_expanded)
+        self.select_dest_label.setText('Choose destination directory')
+        self.select_dest_label.setObjectName('bubble_para')
+        self.select_dest_label.move(30, 130)
+
+        self.browse_dest_button=QtWidgets.QPushButton(self.dir_bubble_expanded)
+        self.browse_dest_button.setText('...')
+        self.browse_dest_button.move(240, 160)
+        self.browse_dest_button.setObjectName('browse_button')
+        
+        self.dest_path=QtWidgets.QLineEdit(self.dir_bubble_expanded)
+        self.dest_path.setObjectName('path_text')
+        self.dest_path.move(60, 160)
+
+
+
+
+        self.select_dir_quality=QtWidgets.QLabel(self.dir_bubble_expanded)
+        self.select_dir_quality.setText('Choose Quality')
+        self.select_dir_quality.setObjectName('bubble_para')
+        self.select_dir_quality.move(30, 205)
+        
+        self.quality_dir_path=QtWidgets.QLineEdit(self.dir_bubble_expanded)
+        self.quality_dir_path.setObjectName('quality_path')
+        self.quality_dir_path.move(60, 235)
+
+        self.quality_dir_combo=QtWidgets.QComboBox(self.dir_bubble_expanded)
+        self.quality_dir_combo.move(170, 235)
+        self.quality_dir_combo.resize(96, 26)
+        self.quality_dir_combo.setObjectName('quality_combo')
+        self.quality_dir_combo.addItem('High')
+        self.quality_dir_combo.addItem('Medium')
+        self.quality_dir_combo.addItem('Low')
+
+        self.compress_dir=QtWidgets.QPushButton(self.dir_bubble_expanded)
+        self.compress_dir.setText('Compress')
+        self.compress_dir.move(108, 280)
+        self.compress_dir.setObjectName('compress_button')
+
         ##End Main window
 
 ##-------------------------------------------------Functions

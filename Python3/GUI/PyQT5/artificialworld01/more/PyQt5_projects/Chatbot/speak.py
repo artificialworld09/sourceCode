@@ -47,5 +47,5 @@ def speak(text):
        playsound(filename)
        
 if(__name__=='__main__'):
-   data='My NAMe Is AleXa'
+   data='we have very low power, please connect to charging the system will shutdown very soon'
    speak(data)

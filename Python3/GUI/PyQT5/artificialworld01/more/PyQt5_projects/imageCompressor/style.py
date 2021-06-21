@@ -74,4 +74,8 @@ s='''
     color: #202020;
     background-color: white;
 }
+
+#quality_combo{
+    color: #202020;
+}
 '''

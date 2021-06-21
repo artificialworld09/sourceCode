@@ -149,4 +149,12 @@ history -c
 man git
 cacafire
 neofetch
+
+TERMUX-API
+termux-tts-engines
+termux-tts-speak
+termux-torch on
+termux-torch off
+termux-vibrate
+termux-volume
 termux-battery-status
