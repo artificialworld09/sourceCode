@@ -47,7 +47,6 @@ s='''
 #path_text{
     max-width: 170px;
     min-width: 170px;
-    color: #202020;
 }
 
 #quality_path{
@@ -57,6 +56,12 @@ s='''
 }
 
 #browse_button{
+    max-width: 20px;
+    min-width: 20px;
+    color: #202020;
+}
+
+#dest_button{
     max-width: 20px;
     min-width: 20px;
     color: #202020;
@@ -76,6 +81,6 @@ s='''
 }
 
 #quality_combo{
-    color: #202020;
+    color: white;
 }
 '''
