@@ -10,8 +10,7 @@ import psutil
 
 battery=psutil.sensors_battery()
 percentage=battery.percent
-per=str(percentage)[0:5]
-percent=float(per)
+percentage=float(f'{percentage:.1f}')
 
 
 class App(QMainWindow):
@@ -61,13 +60,13 @@ class App(QMainWindow):
 
                 ##battry 
                 elif data2 in 'how much battary do we have':
-                        if percent>=75:
+                        if percentage>=75:
                                 speak('We have enough power to continue our work')
-                        elif percent>=40 and percentage<=75:
+                        elif percentage>=40 and percentage<=75:
                                 speak('We should connect our system to charging point to charge our battery')
-                        elif percent>=15 and percentage<=30:
+                        elif percentage>=15 and percentage<=30:
                                 speak("We don't have enough power to work, please connect to charging")
-                        elif percent<=15:
+                        elif percentage<=15:
                                 speak("we have very low power, please connect to charging the system will shutdown very soon")
 
 

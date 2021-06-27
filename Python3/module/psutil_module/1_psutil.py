@@ -2,6 +2,10 @@ import psutil
 
 battery=psutil.sensors_battery()
 percentage=battery.percent
-print(type(percentage))
+print(percentage) #original format
+print()
+percentage=float(f'{percentage:.1f}') #modified format
 
-print(f"sir our system have {percentage} percent battery")
+per=f"sir our system have {percentage} percent battery"
+
+print(per)

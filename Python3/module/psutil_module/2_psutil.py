@@ -2,9 +2,13 @@ import psutil
 
 battery=psutil.sensors_battery()
 percentage=battery.percent
+percentage=float(f'{percentage:.1f}')
+
+per=f"Sir our system have {percentage} percent battery"
+print(per, end=', ')
 
 if percentage>=75:
-    print('We have enough power to continue our work')
+    print(per, 'We have enough power to continue our work')
 elif percentage>=40 and percentage<=75:
     print('We should connect our system to charging point to charge our battery')
 elif percentage>=15 and percentage<=30:

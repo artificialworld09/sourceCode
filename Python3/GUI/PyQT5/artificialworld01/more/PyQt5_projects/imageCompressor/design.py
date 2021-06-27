@@ -2,8 +2,11 @@ import sys
 import style
 from PyQt5.Qt import Qt
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow
+from PyQt5.QtWidgets import QApplication, QFileDialog, QLineEdit, QMainWindow
 from PyQt5.QtGui import QIcon
+import os
+from PIL import Image
+import PIL
 
 class App(QMainWindow):
     def __init__(self):
@@ -16,7 +19,11 @@ class App(QMainWindow):
         self.setObjectName('main')
         self.setStyleSheet(style.s)
 
+        self.image_width=0
 
+##statusBar()
+        self.statusBar().showMessage('Message: ')
+        self.statusBar().setObjectName('status')
 
 
 ##File  ##QFrame
@@ -87,6 +94,7 @@ class App(QMainWindow):
         self.compress_image.setText('Compress')
         self.compress_image.move(108, 260)
         self.compress_image.setObjectName('compress_button')
+        self.compress_image.clicked.connect(self.resize_pic)
 
        ##QComboBox
         self.quality_combo=QtWidgets.QComboBox(self.bubble_expanded)
@@ -96,6 +104,7 @@ class App(QMainWindow):
         self.quality_combo.addItem('High')
         self.quality_combo.addItem('Medium')
         self.quality_combo.addItem('Low')
+        self.quality_combo.currentIndexChanged.connect(self.quality_current_value)
 
 
 
@@ -184,6 +193,7 @@ class App(QMainWindow):
         self.quality_dir_combo.addItem('High')
         self.quality_dir_combo.addItem('Medium')
         self.quality_dir_combo.addItem('Low')
+        self.quality_dir_combo.currentIndexChanged.connect(self.quality_current_value)
 
         self.compress_dir=QtWidgets.QPushButton(self.dir_bubble_expanded)
         self.compress_dir.setText('Compress')
@@ -214,15 +224,73 @@ class App(QMainWindow):
         fileName, _=QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "", "All Files (*);; JPEG (*.jpeg);; JPG (*.jpg)")
         if fileName:
             self.image_path.setText(fileName)
-            print(fileName)
+            img=Image.open(fileName)
+            self.image_width=img.width
+            self.quality_path.setText(str(self.image_width))
 
     def select_folder(self):
         folder=QFileDialog.getExistingDirectory(self, "Select Directory")
         browse=self.sender().objectName()
         if  browse == 'browse_button':
             self.dir_image_path.setText(folder)
+            files=os.listdir(folder)
+
+            first_pic=folder+"/"+files[0]
+            img=Image.open(first_pic)
+            self.image_width=img.width
+            self.quality_dir_path.setText(str(self.image_width))
         else:
             self.dest_path.setText(folder)
+
+
+
+    def quality_current_value(self):
+        if self.quality_combo.currentText()=='High':
+            self.quality_path.setText(str(int(self.image_width)))
+
+        elif self.quality_combo.currentText()=='Medium':
+            self.quality_path.setText(str(int(self.image_width/2)))
+
+        elif self.quality_combo.currentText()=='Low':
+            self.quality_path.setText(str(int(self.image_width/4)))
+
+        
+
+        if self.quality_dir_combo.currentText()=='High':
+            self.quality_dir_path.setText(str(int(self.image_width)))
+
+        elif self.quality_dir_combo.currentText()=='Medium':
+            self.quality_dir_path.setText(str(int(self.image_width/2)))
+
+        elif self.quality_dir_combo.currentText()=='Low':
+            self.quality_dir_path.setText(str(int(self.image_width/4)))
+
+    def compression_code(self, old_pic, new_pic):
+        try:
+            mywidth=int(self.quality_path.text())
+            img=Image.open(old_pic)
+            wpercent=(mywidth/float(img.size[0]))
+            hsize=int((float(img.size[1])*float(wpercent)))
+            img=img.resize((mywidth, hsize), PIL.Image.ANTIALIAS)
+            img.save(new_pic)
+        except Exception as e:
+            self.statusBar().showMessage('Message: ', e)
+
+    def resize_pic(self):
+        old_pic=self.image_path.text()
+
+        new_pic_name, okPressed=QtWidgets.QInputDialog.getText(self, "Save As", "Image name: ", QLineEdit.Normal, "")
+        if okPressed and new_pic_name!="":
+            print(new_pic_name)
+        new_pic=''
+        directories=self.image_path.text().split('/')[:-1]
+        for directory in directories:
+            new_pic=new_pic+directory+'/'
+        new_pic+=new_pic_name
+
+        self.compression_code(old_pic, new_pic)
+        self.statusBar().showMessage('Message: Compressed')
+            
 
 
 app=QApplication(sys.argv)

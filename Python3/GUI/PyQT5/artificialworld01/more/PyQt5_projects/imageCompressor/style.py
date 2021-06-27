@@ -52,7 +52,6 @@ s='''
 #quality_path{
     max-width: 100px;
     min-width: 100px;
-    color: #202020;
 }
 
 #browse_button{
@@ -81,6 +80,10 @@ s='''
 }
 
 #quality_combo{
+    color: white;
+}
+
+#status{
     color: white;
 }
 '''
