@@ -7,6 +7,7 @@ from PyQt5.QtGui import QIcon
 import os
 from PIL import Image
 import PIL
+import time
 
 class App(QMainWindow):
     def __init__(self):
@@ -20,10 +21,6 @@ class App(QMainWindow):
         self.setStyleSheet(style.s)
 
         self.image_width=0
-
-##statusBar()
-        self.statusBar().showMessage('Message: ')
-        self.statusBar().setObjectName('status')
 
 
 ##File  ##QFrame
@@ -69,7 +66,7 @@ class App(QMainWindow):
         self.select_image_label.setObjectName('bubble_para')
         self.select_image_label.move(30, 50)
 
-       ##QLineEdit
+        ##QLineEdit
         self.image_path=QtWidgets.QLineEdit(self.bubble_expanded)
         self.image_path.setObjectName('path_text')
         self.image_path.move(60, 85)
@@ -83,20 +80,14 @@ class App(QMainWindow):
         self.quality_path.setObjectName('quality_path')
         self.quality_path.move(60, 160)
 
-       ##QPushButton
+        ##QPushButton
         self.browse_button=QtWidgets.QPushButton(self.bubble_expanded)
         self.browse_button.setText('...')
         self.browse_button.move(240, 85)
         self.browse_button.setObjectName('browse_button')
         self.browse_button.clicked.connect(self.select_file)
 
-        self.compress_image=QtWidgets.QPushButton(self.bubble_expanded)
-        self.compress_image.setText('Compress')
-        self.compress_image.move(108, 260)
-        self.compress_image.setObjectName('compress_button')
-        self.compress_image.clicked.connect(self.resize_pic)
-
-       ##QComboBox
+        ##QComboBox
         self.quality_combo=QtWidgets.QComboBox(self.bubble_expanded)
         self.quality_combo.move(170, 160)
         self.quality_combo.resize(96, 26)
@@ -105,6 +96,13 @@ class App(QMainWindow):
         self.quality_combo.addItem('Medium')
         self.quality_combo.addItem('Low')
         self.quality_combo.currentIndexChanged.connect(self.quality_current_value)
+
+        ##QPushButton
+        self.compress_image=QtWidgets.QPushButton(self.bubble_expanded)
+        self.compress_image.setText('Compress')
+        self.compress_image.move(108, 260)
+        self.compress_image.setObjectName('compress_button')
+        self.compress_image.clicked.connect(self.resize_pic)
 
 
 
@@ -199,6 +197,14 @@ class App(QMainWindow):
         self.compress_dir.setText('Compress')
         self.compress_dir.move(108, 280)
         self.compress_dir.setObjectName('compress_button')
+        self.compress_dir.clicked.connect(self.resize_folder)
+
+
+
+
+##statusBar()
+        self.statusBar().showMessage('Message: ')
+        self.statusBar().setObjectName('status')
 
         
         ##End Main window
@@ -265,9 +271,8 @@ class App(QMainWindow):
         elif self.quality_dir_combo.currentText()=='Low':
             self.quality_dir_path.setText(str(int(self.image_width/4)))
 
-    def compression_code(self, old_pic, new_pic):
+    def compression_code(self, old_pic, new_pic, mywidth):
         try:
-            mywidth=int(self.quality_path.text())
             img=Image.open(old_pic)
             wpercent=(mywidth/float(img.size[0]))
             hsize=int((float(img.size[1])*float(wpercent)))
@@ -290,6 +295,32 @@ class App(QMainWindow):
 
         self.compression_code(old_pic, new_pic)
         self.statusBar().showMessage('Message: Compressed')
+
+    def resize_folder(self):
+        ext=('.jpg', '.jpeg', '.png')
+        sr=self.dir_image_path.text()
+        ds=self.dest_path.text()
+        path=os.listdir(sr)
+        print(len(path))
+        i=0
+        for file in path:
+            i+=1
+            new_pic=os.path.join(ds, file)
+            old_pic=os.path.join(sr,file)
+            if file.endswith(ext):
+                img=Image.open(old_pic)
+                self.image_width=img.width
+                self.quality_dir_path.setText(str(self.image_width))
+                self.compression_code(old_pic, new_pic, self.image_width)
+
+                total_images=len(path)
+                images_done=i
+                percentage=int(images_done/total_images*100)
+                self.statusBar().showMessage('Message: Compressed '+str(percentage)+'%')
+            else:
+                continue
+        self.statusBar().showMessage('Message: Compressed')
+
             
 
 
@@ -297,3 +328,7 @@ app=QApplication(sys.argv)
 root=App()
 root.show()
 app.exec_()
+
+'''
+11:00/29:52
+'''
