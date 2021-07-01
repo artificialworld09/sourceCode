@@ -1,4 +1,5 @@
 ##pip install googletrans #to install googletrans
+##pip install googletrans==4.0.0-rc1  (solved)
   
   
 ##To check supported languages
@@ -30,9 +31,18 @@
   
   
 ##method-3
+# import googletrans
+
+# gt=googletrans.Translator()
+# t=gt.translate('मेरा नाम एलेक्सा है')
+# data=t.text
+# print(data)
+
+  
+##method-4
 import googletrans
 
 gt=googletrans.Translator()
-t=gt.translate('मेरा नाम एलेक्सा है')
+t=gt.translate('what is your name?', src='en', dest='hi')
 data=t.text
 print(data)
