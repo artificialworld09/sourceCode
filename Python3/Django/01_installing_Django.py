@@ -1,3 +1,4 @@
+"""
 pip install django==2.1
 
 mkdir DjangoProject
@@ -7,4 +8,4 @@ python manage.py runserver
 http://127.0.0.1:8000/admin
 CTRL+C
 
-
+"""
