@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/Javascript.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+
+</style>
+</head>
+<body>    
+
+<h1>arrow_function in JavaScript.</h1>
+<p>
+    An arrow function expression (previously, and now incorrectly known as fat arrow function) has a shorter syntax compared to function expressions. Arrow functions are always anonymous.
+</p>
+<p>You can't call arrow function before define.</p><br><br>
+
+<script>
+    // function expression
+    var myfun1 = function show(){
+        document.write("This is a function expression...<br>");
+    };
+    myfun1();
+</script>
+
+<script>
+    // anonymous function
+    var myfun2 = function(){
+        document.write("This is an anonymous function...<br>");
+    };
+    myfun2();
+</script>
+
+<script>
+    // arrow function
+    var myfun3 = () => {
+        document.write("This is an arrow function...<br>");
+        };
+    myfun3()
+</script>
+<hr>
+
+
+
+
+<h2>arrow_function with parameter</h2>
+<script>
+    var myfun3 = (a) => {
+        document.write(a,"<br>");
+        };
+    myfun3(20)
+</script>
+<hr>
+
+<h2>arrow_function with default parameter</h2>
+<script>
+    var myfun3 = (a,b=20) => {
+        document.write(a,"<br>",b);
+        };
+    myfun3(20)
+</script>
+<hr>
+
+<h2>arrow_function with rest parameter</h2>
+<script>
+    var myfun3 = (a,...args) => {
+        document.write(a,"<br>",args);
+        };
+    myfun3(20,39,50,60)
+</script>
+<hr>
+
+<h2>arrow_function with return statement</h2>
+<script>
+    var myfun4 = (a,b) => {return a+b};
+    document.write(myfun4(56,60));
+</script>
+<hr>
+
+<h2>compare arrow_function with function_declaration</h2>
+<script>
+    // function declaration
+    function myfun5(a,b){
+        return a+b+"<br>";
+    };
+document.write(myfun5(20,50));
+</script>
+
+<script>
+    // arrow function
+    var myfun4 = (a,b) => a+b+"<br>";
+    document.write(myfun4(20,50));
+</script>
+<hr>
+
+</body>
+</html>

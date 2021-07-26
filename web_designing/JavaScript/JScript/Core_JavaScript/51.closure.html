@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/html5.gif">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+
+</style>
+</head>
+<body>    
+
+<h1>closure in JavaScript.</h1>
+<p>
+    Outer function can not access the inner variable.<br>
+    Inner function can access the outer variable.
+</p>
+<hr>
+
+<script>
+    function outer(){
+        var j = "J is a local variable of outer function";
+        document.write(j + "<br>")
+        function inner(){
+            var k = "K is a local variable of inner function";
+            document.write(k + "<br>")
+            document.write(j + "<br>")
+        }
+        inner();
+    }
+    outer()
+</script>
+
+</body>
+</html>

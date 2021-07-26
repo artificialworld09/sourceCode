@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JavaScript</title>
+<link rel="icon" href="images/html5.gif">
+<link rel="stylesheet" type="text/css" href="#">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+.pre{
+    background-color: white;
+    border: 1px solid red;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>break and continue in JavaScript.</h1>
+<h2>break</h2>
+<p class="pre">
+Input:
+for(i=1; i<=5; i++)
+{
+    if(i==3)
+    {
+        break; //stop loop
+    }
+    document.write(i,"br");
+}
+</p>
+
+<p>Output:</p>
+<script>
+for(i=1; i<=5; i++)
+{
+    if(i==3)
+    {
+        break; //stop loop
+    }
+    document.write(i,"<br>");
+}
+</script>
+
+
+
+
+<h2>continue</h2>
+<p class="pre">
+Input:
+for(i=1; i<=5; i++)
+{
+    if(i==3)
+    {
+        continue; //skip loop
+    }
+    document.write(i,"br");
+}
+</p>
+
+<p>Output:</p>
+<script>
+for(i=1; i<=5; i++)
+{
+    if(i==3)
+    {
+        continue; //skip loop
+    }
+    document.write(i,"<br>");
+}
+</script>
+    
+</body>
+</html>

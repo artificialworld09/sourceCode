@@ -8,6 +8,6 @@ var z = {first:"Jane", last:"Doe"}; //Object
 var y = null; // Null
 var w; // Undefined
 
-    // to check any data type you can type: typeof name
-
-console.log(w, typeof w)
+// to check any data type you can type: typeof name
+console.log(name)
+console.log(typeof name)
