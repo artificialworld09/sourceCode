@@ -3,8 +3,7 @@ from gtts import gTTS
 from playsound import playsound
 
 def speak2(text):
-   data = text.lower()
-   tts = gTTS(text=data, lang='hi')
+   tts = gTTS(text=text, lang='hi')
    filename = 'audios/default.mp3'
    tts.save(filename)
    playsound(filename)
